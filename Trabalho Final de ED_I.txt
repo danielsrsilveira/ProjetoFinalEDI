@@ -175,11 +175,11 @@ int main() {
     Lista* lista = criarLista();
 
     // Exemplo de inserção de contatos
-    Contato contato1 = {"Fulano", "fulano@example.com", "12345678900", "(00) 1234-5678"};
-    Contato contato2 = {"Ciclano", "ciclano@example.com", "98765432100", "(11) 9876-5432"};
-    Contato contato3 = {"Beltrano", "beltrano@example.com", "45678912300", "(22) 4567-8901"};
-    Contato contato4 = {"Zulano", "zulano@example.com", "78912345600", "(33) 7890-1234"};
-    Contato contato5 = {"Xablau", "xablau@example.com", "11111111111", "(44) 1111-1111"};
+    Contato contato1 = {"AlunoA", "alunoa@example.com", "12345678900", "(00) 1234-5678"};
+    Contato contato2 = {"AlunoB", "alunob@example.com", "98765432100", "(11) 9876-5432"};
+    Contato contato3 = {"AlunoC", "alunoc@example.com", "45678912300", "(22) 4567-8901"};
+    Contato contato4 = {"AlunoD", "alunod@example.com", "78912345600", "(33) 7890-1234"};
+    Contato contato5 = {"AlunoE", "alunoe@example.com", "11111111111", "(44) 1111-1111"};
 
     inserirContato(lista, contato1);  // Inserção no começo
     inserirContato(lista, contato2);  // Inserção no meio
