@@ -44,3 +44,31 @@ d - usando a posição descoberta na dica c, insira o contato na posição corre
 
 Material strings, ordem alfabética:
 https://docs.google.com/presentation/d/1XlDy5KNN2HrbIcn3nBvt0UjBHLuN7NWWwz3B1D0-Z9Y/edit#slide=id.g3ef17badb0_0_554
+
+O código implementa uma lista duplamente encadeada com header para armazenar contatos. 
+
+Código em detalhes:
+
+    As bibliotecas stdio.h, stdlib.h e string.h são incluídas para usar funções de entrada/saída, alocação dinâmica de memória e manipulação de strings, respectivamente.
+
+    A estrutura Contato é definida para armazenar informações sobre um contato, incluindo nome, email, CPF e telefone.
+
+    A estrutura Nodo é definida para representar cada elemento da lista. Ela contém um campo contato do tipo Contato e dois ponteiros, proximo e anterior, que apontam para os nodos adjacentes.
+
+    A estrutura Lista é definida para manter o controle da lista. Ela possui um ponteiro cabecalho que aponta para o primeiro nodo da lista (o header) e um inteiro tamanho que armazena o número de elementos na lista.
+
+    A função criarLista cria e retorna uma nova lista vazia. Ela aloca memória para a estrutura Lista, inicializa o campo cabecalho como NULL e o campo tamanho como zero.
+
+    A função criarNodo cria e retorna um novo nodo com um contato fornecido como parâmetro. Ela aloca memória para a estrutura Nodo, atribui o contato ao campo contato do nodo e inicializa os ponteiros proximo e anterior como NULL.
+
+    A função inserirContato insere um contato na posição correta da lista, mantendo a ordem alfabética do CPF. Ela recebe a lista e o contato a ser inserido como parâmetros. A função cria um novo nodo com o contato fornecido. Em seguida, percorre a lista para encontrar a posição correta de inserção com base no CPF. O novo nodo é inserido na posição correta, ajustando os ponteiros proximo e anterior dos nodos adjacentes.
+
+    A função removerContato remove um contato de uma posição específica da lista. Ela recebe a lista e a posição do contato a ser removido como parâmetros. A função verifica se a posição é válida. Em seguida, percorre a lista até o nodo correspondente à posição e realiza a remoção, ajustando os ponteiros proximo e anterior dos nodos adjacentes. A memória alocada para o nodo removido é liberada.
+
+    A função consultarContato consulta um contato em uma posição específica da lista. Ela recebe a lista e a posição do contato a ser consultado como parâmetros. A função verifica se a posição é válida. Em seguida, percorre a lista até o nodo correspondente à posição e exibe as informações do contato.
+
+    A função listarContatos exibe todos os contatos da lista. Ela recebe a lista como parâmetro. A função percorre a lista, começando pelo nodo cabeçalho, e exibe as informações de cada contato.
+
+    A função liberarLista libera a memória alocada pela lista e seus nodos. Ela recebe a lista como parâmetro. A função percorre a lista, liberando a memória de cada nodo, e depois libera a memória da estrutura Lista em si.
+
+    A função main é a função principal do programa. Ela cria uma nova lista chamando criarLista(). Em seguida, são adicionados alguns contatos à lista usando a função inserirContato. São feitas chamadas às funções removerContato, consultarContato e listarContatos para demonstrar as operações na lista. Por fim, a memória alocada pela lista é liberada chamando liberarLista(lista).
